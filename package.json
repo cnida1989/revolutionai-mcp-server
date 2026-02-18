@@ -1,0 +1,43 @@
+{
+  "name": "@revolutionai/mcp-server",
+  "version": "0.1.0",
+  "description": "revolutionAI hiring platform MCP server — hire developers from Claude Code",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "revolutionai-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node --env-file=.env dist/index.js",
+    "start:http": "node --env-file=.env dist/http.js",
+    "test": "node --env-file=.env test-tools.mjs",
+    "test:live": "node --env-file=.env test-live.mjs",
+    "inspect": "npx @modelcontextprotocol/inspector node --env-file=.env dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "hiring",
+    "developers",
+    "claude",
+    "revolutionai"
+  ],
+  "author": "revolutionAI <hello@revolutionai.io>",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "@supabase/supabase-js": "^2.49.4",
+    "bcryptjs": "^2.4.3",
+    "stripe": "^17.7.0",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
